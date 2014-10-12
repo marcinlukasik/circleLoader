@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+  		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>circleLoader.js</title>
+		<style>
+			.CL-opacity {
+				-webkit-transition: all 0.3s ease-out 0.1s;
+				-moz-transition: all 0.3s ease-out 0.1s;
+				-ms-transition: all 0.3s ease-out 0.1s;
+				transition: all 0.3s ease-out 0.1s;
+				-webkit-transform: scale(0.5);
+				-moz-transform: scale(0.5);
+				-ms-transform: scale(0.5);
+				transform: scale(0.5);
+				opacity: 0;
+			}
+		</style>
+	</head>
+	<body>
+		<canvas id="circleLoader-1" width="150" height="150"></canvas>
+
+		<script src="circleLoader.js"></script>
+		<script>
+			circleLoader({
+				identifier: 'circleLoader-1',
+				gradient: [0, 0, 0, 150],
+				addColorStop: [[0, '#ecc407'], [0.5, '#ffda10'], [0.5, '#ffda10'], [1, '#fcbd17']],
+				arc: [75, 75, 60, 1.5],
+				lineWidth: 12,
+				interval: 1000,
+				fontActive: true,
+				fontColor: '#1a1a1a',
+				endProgress: 100,
+				hide: [true, 'CL-opacity'],
+				behindStrokeBg: [true, 'yellow', 0.4]
+			});
+		</script>
+	</body>
+</html>
